@@ -53,17 +53,29 @@ const array3EvenB = array3.filter((num) => num % 2 ===0);
 const users = [{name: "Alice", age: 25}, {name: "Bob", age: 30}];
 
 //    Loop through `users` and log each user’s name.  
-
+for (let index in users) {
+    console.log(users[index].name);
+}
 
 
 // 5. **Find a Specific Object**  
 //    Using the `users` array above, find and log the object where `name === "Bob"`.  
-
+for (let i = 0; i < users.length; i++) {
+    if (users[i].name === 'Bob') {
+        console.log(users[i]);
+    }
+}
 
 
 // 6. **Calculate Average Age**  
 //    Loop through `users` and compute the average age.  
-
+let userAverageAge = 0;
+for (let index in users) {
+    userAverageAge += users[index].age;
+    // console.log(userAverageAge)
+}
+userAverageAge /= users.length;
+console.log(userAverageAge)
 // 
 
 // ### **Section 3: Built-in Loop Methods**  
@@ -73,27 +85,36 @@ const users = [{name: "Alice", age: 25}, {name: "Bob", age: 30}];
 //    Use `forEach` to log each element 
 const myArray = ["apple", "banana", "cherry"]; 
 
+for (let fruit in myArray) {
+    console.log(myArray[fruit]);
+}
 
 // 8. **`map` Transformation**  
 const thisArray = [1, 2, 3];
 // use `map` to create a new array where each number is doubled. 
-
+const mapArray = thisArray.map((x) => x*2);
+console.log(mapArray);
 
 // 9. **`filter` with Condition**  
 const grades =[15, 3, 25, 8, 10];
 
 //use `filter` to keep numbers greater than 10.  
-
+const overTen = grades.filter((grade) => grade>10 );
+console.log(overTen);
 
 
 // 10. **`find` First Match**  
 //     Use `find` to get the first number > 50 in 
 // 
 const finder = [20, 45, 60, 70]; 
+const found10 = finder.find((num) => num > 50);
+console.log(found10);
 
 // 11. **`reduce` for Aggregation**  
 //     Use `reduce` to multiply all numbers in `[2, 3, 4]` (result: `24`).  
-
+const array11 = [2, 3, 4];
+let initialValue = array11[0];
+const value11 = array11.reduce((initialValue, ));
 // ---
 
 // ### **Section 4: String Manipulation**  
