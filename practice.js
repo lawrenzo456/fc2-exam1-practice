@@ -303,4 +303,4 @@ let firstArray = [1, 2];
 let secondArray = [3, 4];
 
 const newArray = firstArray.concat(secondArray);
-console.log(newArray);
+// console.log(newArray);
